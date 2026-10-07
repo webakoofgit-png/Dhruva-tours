@@ -19,9 +19,10 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Cars', href: '/cars' },
-    { name: 'Services', href: '/services' },
     { name: 'Packages', href: '/packages' },
+    { name: 'Urbania', href: '/urbania' },
+    { name: 'Services', href: '/services' },
+    { name: 'Cars', href: '/cars' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
@@ -44,7 +45,7 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden xl:flex items-center space-x-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -74,13 +75,13 @@ export const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
+          <div className="xl:hidden flex items-center">
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
               aria-expanded={isOpen}
               aria-controls="mobile-nav"
-              className="text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm"
+              className={`p-2 ${darkText ? 'text-foreground' : 'text-white'} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm`}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
@@ -90,19 +91,13 @@ export const Navbar = () => {
 
       {/* Mobile Nav Overlay */}
       {isOpen && (
-        <div id="mobile-nav" className="md:hidden absolute top-full left-0 w-full bg-background border-b border-foreground/10 shadow-xl">
+        <div id="mobile-nav" className="xl:hidden absolute top-full left-0 max-h-[calc(100dvh-100px)] overflow-y-auto w-full bg-background border-b border-foreground/10 shadow-xl">
           <div className="px-4 pt-2 pb-6 space-y-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`block px-3 py-3 text-base font-medium border-b border-foreground/10 ${
-                  darkText
-                    ? 'text-black'
-                    : location === link.href
-                      ? 'text-white'
-                      : 'text-white/90'
-                }`}
+                className={`block px-3 py-3 text-base font-medium border-b border-foreground/10 ${location === link.href ? 'text-primary' : 'text-foreground'}`}
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

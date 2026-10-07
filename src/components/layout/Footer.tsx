@@ -37,6 +37,7 @@ export const Footer = () => {
               <li><Link href="/about" className="text-muted-foreground hover:text-primary transition-colors">About Us</Link></li>
               <li><Link href="/cars" className="text-muted-foreground hover:text-primary transition-colors">Browse Cars</Link></li>
               <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/urbania" className="text-muted-foreground hover:text-primary transition-colors">Urbania Travel</Link></li>
               <li><Link href="/packages" className="text-muted-foreground hover:text-primary transition-colors">Tour Packages</Link></li>
               <li><Link href="/gallery" className="text-muted-foreground hover:text-primary transition-colors">Gallery</Link></li>
             </ul>
@@ -79,9 +80,10 @@ export const Footer = () => {
 
         <div className="border-t border-foreground/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Dhruva Tour. All rights reserved.</p>
-          <div className="flex gap-4">
-            <span className="hover:text-foreground cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-foreground cursor-pointer transition-colors">Terms of Service</span>
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2">
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
+            <Link href="/terms-and-conditions" className="hover:text-foreground transition-colors">Terms &amp; Conditions</Link>
+            <Link href="/cancellation-and-refund" className="hover:text-foreground transition-colors">Cancellation &amp; Refund</Link>
           </div>
         </div>
       </div>

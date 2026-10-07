@@ -60,7 +60,7 @@ export const cars: Car[] = [
       mileageLimit: '300 km per day',
       fuelPolicy: 'Return with same fuel level',
       securityDeposit: '₹2,000 refundable deposit',
-      cancellationPolicy: 'Free cancellation up to 24 hours before pickup',
+      cancellationPolicy: 'Cancellation terms confirmed in writing before booking',
     },
   },
   {
@@ -84,7 +84,7 @@ export const cars: Car[] = [
       mileageLimit: '300 km per day',
       fuelPolicy: 'Return with same fuel level',
       securityDeposit: '₹3,000 refundable deposit',
-      cancellationPolicy: 'Free cancellation up to 24 hours before pickup',
+      cancellationPolicy: 'Cancellation terms confirmed in writing before booking',
     },
   },
   {
@@ -108,7 +108,7 @@ export const cars: Car[] = [
       mileageLimit: '300 km per day',
       fuelPolicy: 'Return with same fuel level',
       securityDeposit: '₹3,500 refundable deposit',
-      cancellationPolicy: 'Free cancellation up to 24 hours before pickup',
+      cancellationPolicy: 'Cancellation terms confirmed in writing before booking',
     },
   },
   {
@@ -132,7 +132,7 @@ export const cars: Car[] = [
       mileageLimit: '300 km per day',
       fuelPolicy: 'Return with same fuel level',
       securityDeposit: '₹4,000 refundable deposit',
-      cancellationPolicy: 'Free cancellation up to 24 hours before pickup',
+      cancellationPolicy: 'Cancellation terms confirmed in writing before booking',
     },
   },
   {
@@ -156,7 +156,7 @@ export const cars: Car[] = [
       mileageLimit: '300 km per day',
       fuelPolicy: 'Return with same fuel level',
       securityDeposit: '₹5,000 refundable deposit',
-      cancellationPolicy: 'Free cancellation up to 24 hours before pickup',
+      cancellationPolicy: 'Cancellation terms confirmed in writing before booking',
     },
   },
 ];

@@ -1,112 +1,46 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { ShieldCheck, Target, Clock, Map } from 'lucide-react';
+import { Link } from 'wouter';
+import { ArrowRight, Compass, MapPin, MessageCircle, Route, Users } from 'lucide-react';
+import { contactInfo } from '@/data';
+import { CustomerReviews } from '@/components/CustomerReviews';
+import { whatsappLink } from '@/lib/whatsapp';
 
 export default function About() {
   return (
-    <main className="min-h-screen pt-24 pb-20">
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 mb-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="text-5xl md:text-6xl font-serif mb-8"
-            >
-              Built on absolute reliability.
-            </motion.h1>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="space-y-6 text-lg text-muted-foreground font-light leading-relaxed"
-            >
-              <p>
-                Dhruva Tour began with a simple observation: the Indian private
-                transport sector was plagued by unpredictability. Cabs
-                cancelled at the last minute, hidden charges appeared at the
-                end of the trip, and vehicle quality was always a gamble.
-              </p>
-              <p>
-                We decided to build an alternative for those who value their
-                time and peace of mind. We don't aggregate random drivers. We
-                operate a tightly controlled network of verified professionals
-                and well-maintained premium vehicles.
-              </p>
-              <p className="text-primary font-medium">
-                When you book with us, the car arrives. The price is exactly
-                what was quoted. The journey is seamless.
-              </p>
-            </motion.div>
-          </div>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="relative aspect-square lg:aspect-[4/5] border border-foreground/10 overflow-hidden"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1518081461904-9d8f136351c2?w=1200&auto=format&fit=crop"
-              alt="Driver holding door"
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-primary/10 mix-blend-overlay" />
-          </motion.div>
+    <main className="pb-20 pt-36 sm:pt-40">
+      <section className="mx-auto mb-16 grid max-w-7xl gap-10 px-4 sm:mb-20 sm:px-6 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+        <div>
+          <p className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-primary">About Dhruva Tours &amp; Travels</p>
+          <h1 className="text-4xl leading-tight sm:text-6xl">Thoughtful travel.<br />From the first conversation.</h1>
+          <p className="mt-6 text-base leading-8 text-muted-foreground">Dhruva brings together private travel routes, tour planning and Urbania enquiries for families, groups and business travellers. Whether you’re arranging a pilgrimage, a weekend away or an airport transfer, start with the journey you have in mind.</p>
+          <p className="mt-5 text-base leading-8 text-muted-foreground">Explore a route, share your requirements and speak with our team about the vehicle, itinerary and quote. We want the details to be clear before you confirm your plans.</p>
+          <Link href="/packages" className="mt-7 inline-flex min-h-12 items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Explore Our Packages <ArrowRight className="h-4 w-4" /></Link>
+        </div>
+        <div className="rounded-2xl border border-border bg-card p-7 sm:p-10">
+          <Compass className="mb-7 h-10 w-10 text-primary" strokeWidth={1.25} />
+          <h2 className="text-3xl">Different reasons to travel.<br />One place to begin.</h2>
+          <ul className="my-7 space-y-4 text-sm leading-7 text-muted-foreground">
+            <li>Pilgrimages and family getaways</li><li>Corporate, wedding and group travel enquiries</li><li>Airport transfers and outstation routes</li><li>Custom itineraries and Urbania services</li>
+          </ul>
+          <Link href="/urbania" className="inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary">Discover Urbania <ArrowRight className="h-4 w-4" /></Link>
         </div>
       </section>
 
-      <section className="bg-card border-y border-foreground/10 py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif mb-6">Our Core Commitments</h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            {[
-              {
-                icon: ShieldCheck,
-                title: 'Vetted Chauffeurs',
-                desc: 'Every driver must pass a 5-point background check and demonstrate a minimum of 5 years of safe highway driving experience.',
-              },
-              {
-                icon: Target,
-                title: 'Zero Surge Pricing',
-                desc: 'Our rates are fixed. Rain, traffic, or holidays - the price you are quoted is the price you pay. Always.',
-              },
-              {
-                icon: Clock,
-                title: 'Punctuality Guarantee',
-                desc: 'Drivers are dispatched to arrive 15 minutes before your scheduled pickup time. We never keep you waiting.',
-              },
-              {
-                icon: Map,
-                title: 'Wide Coverage',
-                desc: 'Serving Pune, Mumbai, Nashik, Shirdi, and destinations across Maharashtra with local expertise.',
-              },
-            ].map((item, index) => {
-              const Icon = item.icon;
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-16 h-16 mx-auto bg-background border border-foreground/15 flex items-center justify-center mb-6 text-primary">
-                    <Icon className="w-8 h-8" />
-                  </div>
-                  <h3 className="text-xl font-medium mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground font-light leading-relaxed">
-                    {item.desc}
-                  </p>
-                </motion.div>
-              );
-            })}
-          </div>
+      <section className="border-y border-border bg-card py-16 sm:py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Our approach</p><h2 className="mb-9 text-3xl sm:text-4xl">Good planning makes a difference.</h2>
+          <div className="grid gap-8 md:grid-cols-3">{[
+            { icon: Users, title: 'Your requirements first', text: 'Tell us who is travelling, the places you want to visit and any specific needs. These details shape your enquiry.' },
+            { icon: Route, title: 'The details in one place', text: 'Review the route, inclusions and exclusions. Discuss accommodation, meals and extra stops before finalising the plan.' },
+            { icon: MessageCircle, title: 'A direct conversation', text: 'Speak with our team on WhatsApp to confirm availability, pickup arrangements, the full quote and booking terms.' },
+          ].map(({ icon: Icon, title, text }) => <div key={title}><Icon className="mb-5 h-7 w-7 text-primary" /><h3 className="text-2xl">{title}</h3><p className="mt-4 text-sm leading-7 text-muted-foreground">{text}</p></div>)}</div>
         </div>
       </section>
+
+      <section className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:px-8">
+        <div><p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-primary">Routes &amp; destinations</p><h2 className="text-3xl sm:text-4xl">Closer to your next getaway.</h2><p className="mt-5 text-sm leading-8 text-muted-foreground">Our listed routes connect Pune and Mumbai with destinations including Nashik, Shirdi, Mahabaleshwar and Lonavala. For a different destination or a multi-day plan, share your requirements with us.</p><Link href="/gallery" className="mt-5 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-primary">Explore Travel Inspiration <ArrowRight className="h-4 w-4" /></Link></div>
+        <div className="rounded-xl border border-border bg-card p-6 sm:p-8"><MapPin className="mb-4 h-6 w-6 text-primary" /><h2 className="text-2xl">Let’s talk about your trip</h2><p className="mt-4 text-sm leading-7 text-muted-foreground">{contactInfo.address}</p><a href={`tel:${contactInfo.phone.replace(/[^0-9+]/g, '')}`} className="mt-3 inline-flex min-h-11 items-center text-sm font-semibold text-primary">{contactInfo.phone}</a><a href={`mailto:${contactInfo.email}`} className="block break-words text-sm text-primary underline underline-offset-4">{contactInfo.email}</a><a href={whatsappLink('Hello Dhruva Travels, I would like to discuss a trip with your team.')} target="_blank" rel="noreferrer" className="mt-6 inline-flex min-h-12 items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">Talk to Our Team <MessageCircle className="h-4 w-4" /></a></div>
+      </section>
+      <CustomerReviews />
     </main>
   );
 }
