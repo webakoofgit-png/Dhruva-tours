@@ -195,8 +195,7 @@ export const packages = [
     title: 'Pune to Shirdi',
     duration: '~4 hrs',
     startingPrice: '₹3,200',
-    image:
-      'https://images.unsplash.com/photo-1623888365612-40e13bc30e4b?w=1200&auto=format&fit=crop',
+    image: '/pune%20to%20shirdi.jpg.jpeg',
     description: 'Comfortable pilgrimage journey with our experienced drivers.',
     inclusions: ['Toll Taxes', 'Professional Driver', 'Fuel', 'AC Vehicle'],
     exclusions: ['Parking (if any)', 'Driver Allowance', 'VIP Darshan Tickets'],
@@ -221,8 +220,7 @@ export const packages = [
     title: 'Pune to Nashik',
     duration: '~4.5 hrs',
     startingPrice: '₹3,500',
-    image:
-      'https://images.unsplash.com/photo-1596568359543-98782a20b22a?w=1200&auto=format&fit=crop',
+    image: '/pune%20to%20nashik.webp',
     description: 'Wine country visits or corporate travel to Nashik.',
     inclusions: ['Toll Taxes', 'Professional Driver', 'Fuel', 'AC Vehicle'],
     exclusions: ['Parking (if any)', 'Driver Allowance', 'Vineyard Entry Fees'],
@@ -237,8 +235,7 @@ export const packages = [
     title: 'Pune to Mahabaleshwar',
     duration: '~3.5 hrs',
     startingPrice: '₹3,000',
-    image:
-      'https://images.unsplash.com/photo-1593693397690-362bc174275d?w=1200&auto=format&fit=crop',
+    image: '/pune%20to%20mahabaleshwar.avif',
     description: 'Weekend getaway to the misty hills.',
     inclusions: ['Toll Taxes', 'Professional Driver', 'Fuel', 'AC Vehicle'],
     exclusions: [
@@ -263,8 +260,7 @@ export const packages = [
     title: 'Mumbai to Nashik',
     duration: '~3.5 hrs',
     startingPrice: '₹3,400',
-    image:
-      'https://images.unsplash.com/photo-1616053351336-e8d1c7d2bd54?w=1200&auto=format&fit=crop',
+    image: '/mumbai%20to%20nashik.png',
     description: 'Direct connection from Mumbai to Nashik.',
     inclusions: ['Toll Taxes', 'Professional Driver', 'Fuel', 'AC Vehicle'],
     exclusions: ['Parking (if any)', 'Driver Allowance'],
@@ -282,8 +278,7 @@ export const packages = [
     title: 'Pune to Lonavala',
     duration: '~1.5 hrs',
     startingPrice: '₹1,800',
-    image:
-      'https://images.unsplash.com/photo-1598444733470-3d8426090ee5?w=1200&auto=format&fit=crop',
+    image: '/pune%20to%20lonavla.png',
     description: 'Quick escape to the nearest hill station.',
     inclusions: ['Toll Taxes', 'Professional Driver', 'Fuel', 'AC Vehicle'],
     exclusions: ['Parking (if any)', 'Driver Allowance'],

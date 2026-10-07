@@ -21,7 +21,7 @@ const urbaniaServices = [
 ];
 
 export default function Home() {
-  const featured = ['pune-shirdi', 'pune-mahabaleshwar', 'pune-lonavala']
+  const featured = ['pune-shirdi', 'pune-mahabaleshwar', 'pune-nashik']
     .flatMap((slug) => packages.filter((pkg) => pkg.slug === slug));
 
   return (
